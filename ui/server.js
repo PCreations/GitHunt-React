@@ -57,7 +57,7 @@ app.use((req, res) => {
 
         const html = (<Html
           content={content}
-          state={{ data: context.store.getState().apollo.data }}
+          state={{ apollo: context.store.getState().apollo }}
         />);
         res.send(`<!doctype html>\n${ReactDOM.renderToStaticMarkup(html)}`);
         res.end();
